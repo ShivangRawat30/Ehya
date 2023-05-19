@@ -18,6 +18,10 @@ const ArticleCard = ({ className }) => {
         <p className="text-dark-light mt-3 text-sm">
           Majority of people will work on jobs that don't exist today.
         </p>
+        <div className="flex justify-between flex-nowrap items-center mt-6">
+          <div className="flex items-center gap-x-2"></div>
+          <span>02 May</span>
+        </div>
       </div>
     </div>
   );

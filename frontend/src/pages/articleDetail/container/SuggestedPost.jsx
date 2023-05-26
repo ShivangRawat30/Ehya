@@ -19,7 +19,7 @@ const SuggestedPost = ({ className, header, posts = [] }) => {
             />
             <div className="text-sm font-roboto text-dark-hard font-medium">
               <h3>{item.title}</h3>
-              <span>{new Date()}</span>
+              <span>{new Date(item.createAt).toLocaleDateString}</span>
             </div>
           </div>
         ))}

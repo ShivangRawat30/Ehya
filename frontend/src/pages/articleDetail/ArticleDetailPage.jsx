@@ -15,25 +15,25 @@ const postsData = [
     _id: "1",
     image: images.Post1Image,
     title: "Help childern get better education",
-    createAt: "",
+    createAt: "2013-10-02T01:11:18.965Z",
   },
   {
     _id: "2",
     image: images.Post1Image,
     title: "Help childern get better education",
-    createAt: "",
+    createAt: "2013-10-02T01:11:18.965Z",
   },
   {
     _id: "3",
     image: images.Post1Image,
     title: "Help childern get better education",
-    createAt: "",
+    createAt: "2013-10-02T01:11:18.965Z",
   },
   {
     _id: "4",
     image: images.Post1Image,
     title: "Help childern get better education",
-    createAt: "",
+    createAt: "2013-10-02T01:11:18.965Z",
   },
 ];
 const ArticleDetailPage = () => {

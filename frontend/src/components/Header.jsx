@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { AiOutlineMenu, AiOutlineClose, AiOutlineDown } from "react-icons/ai";
-import { images } from "../constants";
+import React, { useState } from 'react';
+import { AiOutlineMenu, AiOutlineClose, AiOutlineDown } from 'react-icons/ai';
+import { images } from '../constants';
 
 const navItemsInfo = [
-  { name: "Home", type: "link" },
-  { name: "Articles", type: "link" },
-  { name: "Pages", type: "dropdown", items: ["About us", "Contact us"] },
-  { name: "Pricing", type: "link" },
-  { name: "FAQ", type: "link" },
+  { name: 'Home', type: 'link' },
+  { name: 'Articles', type: 'link' },
+  { name: 'Pages', type: 'dropdown', items: ['About us', 'Contact us'] },
+  { name: 'Pricing', type: 'link' },
+  { name: 'FAQ', type: 'link' },
 ];
 
 const NavItem = ({ item }) => {
@@ -20,7 +20,7 @@ const NavItem = ({ item }) => {
   };
   return (
     <li className="relative group">
-      {item.type === "link" ? (
+      {item.type === 'link' ? (
         <>
           <a href="/" className="px-4 py-2 ">
             {item.name}
@@ -40,12 +40,13 @@ const NavItem = ({ item }) => {
           </button>
           <div
             className={`${
-              dropdown ? "block" : "hidden"
+              dropdown ? 'block' : 'hidden'
             } lg:hidden transition-all duration-500 pt-4 lg:absolute lg:bottom-0 lg:right-0 lg:transform lg:translate-y-full lg:group-hover:block w-max`}
           >
             <ul className="bg-dark-soft lg:bg-transparent text-center flex flex-col shadow-lg rounded-lg overflow-hidden">
-              {item.items.map((page) => (
+              {item.items.map((page, index) => (
                 <a
+                  key={index}
                   href="/"
                   className="hover:bg-dark-hard hover:text-white px-4 py-2 text-white lg:text-dark-soft"
                 >
@@ -85,7 +86,7 @@ const Header = () => {
         </div>
         <div
           className={`${
-            navIsVisible ? "right-0" : "-right-full"
+            navIsVisible ? 'right-0' : '-right-full'
           } transition-all duration-300 mt-[56px] lg:mt-0 bg-dark-hard lg:bg-transparent z-[49] flex flex-col w-full lg:w-auto justify-center lg:justify-end lg:flex-row fixed top-0 bottom-0 lg:static gap-x-9 items-center`}
         >
           <ul className="text-white items-center gap-y-5 lg:text-dark-soft flex flex-col lg:flex-row gap-x-2 font-semibold">

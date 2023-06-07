@@ -5,6 +5,7 @@ import BreadCrumbs from '../../components/BreadCrumbs';
 import { images } from '../../constants';
 import SuggestedPost from './container/SuggestedPost';
 import CommentsContainer from '../../components/comments/CommentsContainer';
+import SocialShareButtons from '../../components/SocialShareButtons';
 
 const breadCrumbsData = [
   { name: 'Home', link: '/' },
@@ -79,14 +80,29 @@ const ArticleDetailPage = () => {
               nulla harum temporibus.
             </p>
           </div>
-          <CommentsContainer className="mt-10" logginedUserId="a"/>
+          <CommentsContainer className="mt-10" logginedUserId="a" />
         </article>
-        <SuggestedPost
-          header="Latest Article"
-          posts={postsData}
-          tags={tagsData}
-          className="mt-8 lg:mt-0 lg:max-w-xs"
-        />
+        <div>
+          <SuggestedPost
+            header="Latest Article"
+            posts={postsData}
+            tags={tagsData}
+            className="mt-8 lg:mt-0 lg:max-w-xs"
+          />
+          <div className="mt-7">
+            <h2 className="font-roboto font-medium text-dark-hard mb-4 md:text-xl">
+              Share on:
+            </h2>
+            <SocialShareButtons
+              url={encodeURI(
+                'https://medium.com/datadriveninvestor/web3-vs-web-3-0-they-are-not-the-same-b88d65dba6e8'
+              )}
+              title={encodeURIComponent(
+                'Web3 vs. Web 3.0: They are NOT the same!'
+              )}
+            />
+          </div>
+        </div>
       </section>
     </MainLayout>
   );

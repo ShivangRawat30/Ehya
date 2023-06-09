@@ -20,7 +20,7 @@ UserSchema.pre('save', async function (next) {
     this.password = await bcrypt.hash(this.password, 10);
     return next();
   }
-  return next();
+  return next(); 
 });
 
 UserSchema.methods.generateJWT = async function () {
